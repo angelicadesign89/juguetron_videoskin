@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script type="text/javascript">
+        var clickTag = 'https://www.juguetron.mx/promociones';
+    </script>
+    <style>
+        html {
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="ad.size" content="width=300, height=600">
+    <title>Video_300x600</title>
+
+    <style>
+        body.videonew {
+            width: 300px;
+            height: 600px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .videonew_wrapper {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #ffffff;
+        }
+
+        .videonew_wrapper.size_300x600 {
+            width: 300px;
+            height: 600px;
+        }
+
+        #banner,
+        #box-video,
+        #video {
+            width: 300px;
+            height: 600px;
+        }
+
+        #video {
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body class="videonew">
+
+
+        <div id="pixel" style="opacity: 0; position: absolute;"></div>
+
+
+    <div class="videonew_wrapper carousel-wrapper size_300x600" id="cta">
+
+
+        <!--<div class="carousel-container">
+            <div id="ytplayer" onmouseenter="SetYoutubeVolume(true)" onmouseleave="SetYoutubeVolume(false)" style="margin-left: -135px; z-index: 2">
+           
+            </div>
+        </div>-->
+
+
+        <div id="banner">
+
+            <div id="box-video" onclick="adfOpenGlobalClickTAG()">
+                <video id="video" webkit-playsinline="true" playsinline="true" autoplay muted loop>
+                <source src="https://res.cloudinary.com/bwmcpwyf/video/upload/v1794851828/juguetron_banner_300x600_rich.mp4" type="video/mp4">
+                 
+                 
+            </video>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var container = document.getElementById("pixel");
+
+        function adfOpenGlobalClickTAG() {
+            window.open(clickTag, '_blank');
+
+
+            var axel = Math.random() + "";
+            var a = axel * 10000000000000;
+            var trackingHTML = '<img src="https://ad.doubleclick.net/ddm/activity/src=16547802;type=invmedia;cat=flood00d;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=' + a + '?" width="1" height="1" alt=""/>';
+            container.innerHTML = trackingHTML;
+
+            console.log("Se lanza click con pixel");
+        }
+    </script>
+
+</body>
+
+</html>
